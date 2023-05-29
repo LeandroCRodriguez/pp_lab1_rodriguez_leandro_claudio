@@ -79,17 +79,17 @@ def mostrar_estadísticas_logros(lista:list, clave:str):
 ruta_csv = "C:\\Users\\Lean\\Documents\\UTN\\UTN programación 1 Python\\parcial_1\\estadísticas_jugador.csv"
 
 
-def guardar_csv(ruta_csv:str,estadisticas:list):
-    '''
-    Guarda en un csv el diccionario donde se encuentra el jugador
-    Recibe un dict
-    No retorna
-    '''
-    encabezados = estadisticas.keys()
-    valores = estadisticas.values()
-    with open(ruta_csv, 'w') as archivo_csv:
-        archivo_csv.write(','.join(encabezados) + '\n')
-        archivo_csv.write(','.join(map(str, valores)) + '\n')
+# def guardar_csv(ruta_csv:str,estadisticas:list):
+#     '''
+#     Guarda en un csv el diccionario donde se encuentra el jugador
+#     Recibe un dict
+#     No retorna
+#     '''
+#     encabezados = estadisticas.keys()
+#     valores = estadisticas.values()
+#     with open(ruta_csv, 'w') as archivo_csv:
+#         archivo_csv.write(','.join(encabezados) + '\n')
+#         archivo_csv.write(','.join(map(str, valores)) + '\n')
 
 
 
@@ -449,7 +449,7 @@ def ejecutar_opcion(lista_jugadores:list, opcion):
 
     elif opcion == "3":
         print(estadisticas_jugador)
-        guardar_csv(ruta_csv, estadisticas_jugador)
+        # guardar_csv(ruta_csv, estadisticas_jugador)
 
     elif opcion == "4":      
         logros_jugador = mostrar_logros_jugador(lista_jugadores)
